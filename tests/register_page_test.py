@@ -11,15 +11,15 @@ class RegistrationTest(BaseTest):
         hp.click_sign_in()
 
         rp = RegisterPage(self.driver)
-        rp.fill_name("Jan")
-        rp.fill_lastname("Kowalski")
-        rp.fill_email("jkowalski.pl")
-        rp.fill_password("H@slo123")
-        rp.confirm_password("H@slo123")
+        rp.fill_name('Jan')
+        rp.fill_lastname('Kowalski')
+        rp.fill_email('jkowalski.pl')
+        rp.fill_password('H@slo123')
+        rp.confirm_password('H@slo123')
         rp.accept_policy()
         rp.create_account()
-        rp.verify_visible_errors(1, ["Wprowadzono niepoprawny adres e-mail"])
+        rp.verify_visible_errors(1, ['Wprowadzono niepoprawny adres e-mail'])
         time.sleep(2)
 
-if __name__=="__main__":
+if __name__=='__main__':
     unittest.main(verbosity=2)
