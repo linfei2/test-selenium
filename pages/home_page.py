@@ -17,5 +17,5 @@ class HomePage(BasePage):
         WebDriverWait(self.driver, 40).until(EC.element_to_be_clickable(HomePageLocators.ACCEPT_BANNER))
         WebDriverWait(self.driver, 40).until(EC.presence_of_element_located(HomePageLocators.SIGN_IN_BTN))
         WebDriverWait(self.driver, 40).until(EC.element_to_be_clickable(HomePageLocators.SIGN_IN_BTN))
-        assert "Modne buty damskie, męskie, dziecięce oraz torebki" in self.driver.title
-        print("Weryfikacja strony HomePage")
+        assert 'Modne buty damskie, męskie, dziecięce oraz torebki' in self.driver.title
+        print('Weryfikacja strony HomePage')
