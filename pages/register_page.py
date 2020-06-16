@@ -42,7 +42,7 @@ class RegisterPage(BasePage):
         assert len(visible_error_notices) == number_of_errors
         errors_text_fact = []
         for i in range (len(visible_error_notices)):
-            errors_text_fact.append(visible_error_notices[i].get_attribute("innerText"))
+            errors_text_fact.append(visible_error_notices[i].get_attribute('innerText'))
             print(errors_text_fact)
             print(errors_texts)
             assert errors_text_fact == errors_texts
