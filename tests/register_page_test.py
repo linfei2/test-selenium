@@ -19,7 +19,7 @@ class RegistrationTest(BaseTest):
         rp.accept_policy()
         rp.create_account()
         rp.verify_visible_errors(1, ['Wprowadzono niepoprawny adres e-mail'])
-        time.sleep(2)
+
 
 if __name__=='__main__':
     unittest.main(verbosity=2)
