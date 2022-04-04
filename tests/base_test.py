@@ -9,5 +9,5 @@ class BaseTest(unittest.TestCase):
         self.driver.maximize_window()
 
     def tearDown(self):
-        self.driver.save_screenshot("zrzut.png")
+        self.driver.save_screenshot("screenshot.png")
         self.driver.quit()

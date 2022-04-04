@@ -11,7 +11,6 @@ class RegistrationTest(BaseTest):
         hp.click_sign_in()
 
         rp = RegisterPage(self.driver)
-        rp.verify_register_page()
         rp.fill_name("Jan")
         rp.fill_lastname("Kowalski")
         rp.fill_email("jkowalski.pl")

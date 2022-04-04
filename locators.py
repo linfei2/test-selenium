@@ -7,6 +7,10 @@ class HomePageLocators:
 
 
 class RegisterPageLocators:
+    REGISTRATION_FORM = (
+        By.XPATH,
+        "//form[@class='form-validate account-create__form has-validation-callback']",
+    )
     NAME_INPUT = (By.ID, "firstname")
     LASTNAME_INPUT = (By.ID, "lastname")
     EMAIL_INPUT = (By.ID, "email_address")

@@ -5,11 +5,6 @@ from locators import RegisterPageLocators
 
 
 class RegisterPage(BasePage):
-    def verify_register_page(self):
-        WebDriverWait(self.driver, 20).until(
-            EC.title_is, ("Utwórz nowe konto klienta | Wiosna 2022 na eobuwie.pl")
-        )
-
     def fill_name(self, name):
         el = self.driver.find_element(*RegisterPageLocators.NAME_INPUT)
         el.send_keys(name)
@@ -48,3 +43,12 @@ class RegisterPage(BasePage):
         print(error_messages)
         for message in error_messages:
             assert message in error_texts
+
+    def _verify_page(self):
+        WebDriverWait(self.driver, 20).until(
+            EC.presence_of_element_located(RegisterPageLocators.REGISTRATION_FORM)
+        )
+        assert (
+                "Utwórz nowe konto klienta | Wiosna 2022 na eobuwie.pl" in self.driver.title
+        )
+        print("Weryfikacja strony RegisterPage")

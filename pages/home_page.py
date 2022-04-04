@@ -7,16 +7,12 @@ from locators import HomePageLocators
 
 class HomePage(BasePage):
     def click_accept_banner(self):
-        el = WebDriverWait(self.driver, 20).until(
-            EC.element_to_be_clickable(HomePageLocators.ACCEPT_BANNER)
-        )
+        el = self.driver.find_element(*HomePageLocators.ACCEPT_BANNER)
         el.click()
         sleep(1)
 
     def click_sign_in(self):
-        el = WebDriverWait(self.driver, 20).until(
-            EC.element_to_be_clickable(HomePageLocators.SIGN_IN_BTN)
-        )
+        el = self.driver.find_element(*HomePageLocators.SIGN_IN_BTN)
         el.click()
 
     def _verify_page(self):
